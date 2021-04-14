@@ -1,0 +1,27 @@
+{
+  "name": "portal-nextjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wcarugatti/portal-nextjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wcarugatti/portal-nextjs/issues"
+  },
+  "homepage": "https://github.com/wcarugatti/portal-nextjs#readme",
+  "dependencies": {
+    "next": "^10.1.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
