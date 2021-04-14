@@ -4,6 +4,6 @@ import React from 'react';
 
 export default function pages() {
   return (
-    <div> teste </div>
+    <div> teste2 </div>
   );
 }
