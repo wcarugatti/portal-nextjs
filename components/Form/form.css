@@ -1,0 +1,40 @@
+
+.bg-color{
+    background-color: #f7f8f9; 
+    
+    }
+
+.form-cadastro{    
+    height:100vh;
+}    
+
+.area-form{
+    height: 70vh;    
+    margin-top: -100px;
+}
+
+.split{
+    height: 100%;
+    width: 50%;
+    position: fixed;
+  }
+
+  .left {
+    left: 0;
+    background-color: #f7f8f9; 
+
+  }
+  
+  .right {
+    right: 0;
+    background-color: #DDD;
+  }
+
+  
+.right label {
+    margin: 30px 45px;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #17A2B8;
+    font-weight: bold;
+}

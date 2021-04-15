@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+*{
+  margin:0;
+  padding:0;
+  outline: none;
+  box-sizing:border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.app-window{
+  display:flex;
+  height:100vh;
+  background-color: #f3f3f3;
+}
+
+.sidebar{
+  width:50%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #DDD;
+  background-color: #17A2B8;
+}
+
+.contentarea{
+ top:50%;
+ flex:1; 
+ align-items: center;
+ display: flex;
+ padding: 0 20px;
+}
+
+.contentbox{
+  max-width: 550px;
+  margin: 0 auto; 
+  background: #fff ;
+  padding: 30px;
+  border-radius: 5px;  
+  box-shadow: 0 0 0 10px rgba(0,0,0,0.13);
+  width:500px;
+  height:300px;
+}
+
+.formfields{
+  display: flex;
+  flex-direction: column;  
+}
+
+.labelinput{
+  margin-bottom: 20px;
+  font-weight: 900;
+  color: #17A2B8;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.inputtext{
+  background-color: #ececec;
+  padding: 10px;
+  width: 410px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  font-family: Roboto;
+  font-weight: bold;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.submitbutton{  
+  margin-top: 20px;
+  margin-left: 150px;  
+  width: 150px;
+  height: 40px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #17A2B8;
+  color:#fff;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.submitbutton:hover {
+  background-color: white;
+  color: #17A2B8;
+  border: 1px solid #17A2B8;
+
+}
+
+
