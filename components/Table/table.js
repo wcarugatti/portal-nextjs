@@ -15,7 +15,7 @@ export const FilteringTable = ({data}) => {
 				</div>
 			) : (
 				<>
-					<label className='label-search'>RESULTADO DA BUSCA</label>
+					<label className='label-search'>VAGAS DISPONÍVEIS</label>
 					<div className='div-table'>
 						<Table className='table-fixed'>
 							<thead>
