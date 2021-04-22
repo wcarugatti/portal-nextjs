@@ -5,9 +5,15 @@ import { useHistory } from "react-router-dom";
 import MOCK_DATA from "../components/Table/jobs.json";
 import { connectToDatabase } from "../util/mongodb";
 import ClipLoader from "react-spinners/ClipLoader";
+import VerticalNavBar from "../components/VerticalNavBar/VerticalNavBar";
 
-export default function Search(props) {
+export default function Index(props) {
   const [loading, setLoading] = useState(false);
+  const [sidebar, setSidebar] = useState(true);
+
+  function toggleSidebar() {
+    setSidebar(!sidebar);
+  }
 
   // useEffect(() => {
   // 	setTimeout(() => {
@@ -15,11 +21,34 @@ export default function Search(props) {
   // 	}, 1000);
   // }, []);
 
-  const history = useHistory();
+  // const history = useHistory();
 
   function goBack() {
     history.push("./home");
   }
+
+  return (
+    <>
+      {/* <Header /> */}
+      {/* <button className='back-button' onClick={goBack}>
+      <FaAngleDoubleLeft size={25} />
+    </button> */}
+
+      <VerticalNavBar sidebar={sidebar} toggleSidebar={toggleSidebar} />
+
+      <div
+        // className={"page-content p-5" + (sidebar ? "active" : "")}
+        className="page-content px-5 py-4"
+        id="content"
+      >
+        <div className="row">
+          <div className="col-12">
+            <FilteringTable data={props.data} />
+          </div>
+        </div>
+      </div>
+    </>
+  );
 
   return (
     <div>
@@ -29,11 +58,23 @@ export default function Search(props) {
         </div>
       ) : (
         <>
-          <Header />
+          {/* <Header /> */}
           {/* <button className='back-button' onClick={goBack}>
 						<FaAngleDoubleLeft size={25} />
 					</button> */}
-          <FilteringTable data={props.data} />
+
+          <VerticalNavBar sidebar={sidebar} toggleSidebar={toggleSidebar} />
+
+          <div
+            className={"page-content p-5" + (sidebar ? "active" : "")}
+            id="content"
+          >
+            <div className="row">
+              <div className="col-12">
+                <MemoizedTable data={props.data} />
+              </div>
+            </div>
+          </div>
         </>
       )}
     </div>
@@ -46,10 +87,7 @@ export async function getStaticProps(context) {
   // const data = MOCK_DATA;
   const { db } = await connectToDatabase();
 
-  const data = await db
-    .collection("jobs_tb")
-		.find({})
-    .toArray();
+  const data = await db.collection("jobs_tb").find({}).toArray();
 
   if (!data) {
     return {
