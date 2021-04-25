@@ -9,8 +9,8 @@ export default function VerticalNavBar({sidebar, toggleSidebar}) {
       <div className="py-4 px-3 mb-4 profile">
         <div className="media-body text-center">
           <img src="images/man.svg" height="90" width="auto" />
-          <h4 className="mb-0 media-content">Rahul Yaduvanshi</h4>
-          <p className=" mb-0 media-sub-content">UI/UX Developer</p>
+          {/* <h4 className="mb-0 media-content">Rahul Yaduvanshi</h4>
+          <p className=" mb-0 media-sub-content">UI/UX Developer</p> */}
         </div>
       </div>
 
