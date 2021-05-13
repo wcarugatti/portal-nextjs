@@ -32,7 +32,7 @@
     transform-origin: top left;
     transition: all 0.2s ease-out;
     font-weight: bold;
-    color:#17A2B8;
+    color:#345a7a;
   }
 
   #float-label:focus-within label {
@@ -40,7 +40,7 @@
   }
 
   #float-label:focus-within input {
-    box-shadow: 0 0 0 0.25rem rgba(23, 162, 184, 0.55);
+    box-shadow: 0 0 0 0.25rem #345a7a;
     border: 0px solid;
   }
 

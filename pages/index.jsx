@@ -6,79 +6,10 @@ import MOCK_DATA from "../components/Table/jobs.json";
 import { connectToDatabase } from "../util/mongodb";
 import ClipLoader from "react-spinners/ClipLoader";
 import VerticalNavBar from "../components/VerticalNavBar/VerticalNavBar";
+import Page from "../components/Page";
 
 export default function Index(props) {
-  const [loading, setLoading] = useState(false);
-  const [sidebar, setSidebar] = useState(true);
-
-  function toggleSidebar() {
-    setSidebar(!sidebar);
-  }
-
-  // useEffect(() => {
-  // 	setTimeout(() => {
-  // 		setLoading(false);
-  // 	}, 1000);
-  // }, []);
-
-  // const history = useHistory();
-
-  function goBack() {
-    history.push("./home");
-  }
-
-  return (
-    <>
-      {/* <Header /> */}
-      {/* <button className='back-button' onClick={goBack}>
-      <FaAngleDoubleLeft size={25} />
-    </button> */}
-
-      <VerticalNavBar sidebar={sidebar} toggleSidebar={toggleSidebar} />
-
-      <div
-        // className={"page-content p-5" + (sidebar ? "active" : "")}
-        className="page-content px-5 py-4"
-        id="content"
-      >
-        <div className="row">
-          <div className="col-12">
-            <FilteringTable data={props.data} />
-          </div>
-        </div>
-      </div>
-    </>
-  );
-
-  return (
-    <div>
-      {loading ? (
-        <div className="loading-screen">
-          <ClipLoader size={150} color={"#fff"} loading={loading} />
-        </div>
-      ) : (
-        <>
-          {/* <Header /> */}
-          {/* <button className='back-button' onClick={goBack}>
-						<FaAngleDoubleLeft size={25} />
-					</button> */}
-
-          <VerticalNavBar sidebar={sidebar} toggleSidebar={toggleSidebar} />
-
-          <div
-            className={"page-content p-5" + (sidebar ? "active" : "")}
-            id="content"
-          >
-            <div className="row">
-              <div className="col-12">
-                <MemoizedTable data={props.data} />
-              </div>
-            </div>
-          </div>
-        </>
-      )}
-    </div>
-  );
+  return <Page {...props} />;
 }
 
 export async function getStaticProps(context) {
@@ -87,7 +18,9 @@ export async function getStaticProps(context) {
   // const data = MOCK_DATA;
   const { db } = await connectToDatabase();
 
-  const data = await db.collection("jobs_tb").find({}).toArray();
+  const perPage = 20;
+
+  const data = await db.collection("jobs_tb").find({}).limit(perPage).toArray();
 
   if (!data) {
     return {
@@ -95,13 +28,40 @@ export async function getStaticProps(context) {
     };
   }
 
+  const summary_res = await db
+    .collection("summary_tb")
+    .find({})
+    .sort({ _id: -1 })
+    .limit(1)
+    .toArray();
+
+  let summary;
+
+  try {
+    summary = summary_res[0].data;
+  } catch (error) {
+    console.log(error);
+    summary = [];
+  }
+
+  let totalpages = 0;
+  for (const lang in summary) {
+    totalpages += summary[lang];
+  }
+
+  
+  totalpages = Math.ceil(totalpages / perPage);
+
   return {
     props: {
       data: JSON.parse(JSON.stringify(data)),
+      page: 1,
+      totalpages,
+      filter: "home"
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every second
-    revalidate: 30, // In seconds
+    revalidate: 60 * 5, // In seconds
   };
 }

@@ -1,9 +1,8 @@
 import React from "react";
 
 // import { Container } from './styles';
-
-export default function VerticalNavBar({sidebar, toggleSidebar}) {
-
+import FloatingLabel from "../FloatingLabel/floatinglabel";
+export default function VerticalNavBar({ sidebar, toggleSidebar }) {
   return (
     <div className={"vertical-nav " + (sidebar ? "active" : "")} id="sidebar">
       <div className="py-4 px-3 mb-4 profile">
@@ -15,29 +14,22 @@ export default function VerticalNavBar({sidebar, toggleSidebar}) {
       </div>
 
       <ul className="nav flex-column  mb-0">
-        <li className="nav-item active">
-          <a href="#" className="nav-link ">
-            <img src="images/home.svg" height="15" width="auto" />
-            Home
-          </a>
+        <li className="nav-item active p-2">
+          <FloatingLabel
+            type="text"
+            name="cod_cliente_raiz"
+            placeholder="Codigo Cliente Raíz"
+          />
         </li>
         <li className="nav-item">
           <a href="#" className="nav-link">
-            <img
-              src="images/favourite.svg"
-              height="15"
-              width="auto"
-            />
+            <img src="images/favourite.svg" height="15" width="auto" />
             About
           </a>
         </li>
         <li className="nav-item">
           <a href="#" className="nav-link">
-            <img
-              src="images/telegram.svg"
-              height="15"
-              width="auto"
-            />
+            <img src="images/telegram.svg" height="15" width="auto" />
             Services
           </a>
         </li>
@@ -49,17 +41,18 @@ export default function VerticalNavBar({sidebar, toggleSidebar}) {
         </li>
         <li className="nav-item">
           <a href="#" className="nav-link">
-            <img
-              src="images/instagram.svg"
-              height="15"
-              width="auto"
-            />
+            <img src="images/instagram.svg" height="15" width="auto" />
             Instagram
           </a>
         </li>
       </ul>
-      <div id="sidebarCollapse" className={sidebar ? "rotate" : ""} onClick={()=>toggleSidebar()} type="button">
-        <img src="images/back.svg" />
+      <div
+        id="sidebarCollapse"
+        className={sidebar ? "rotate" : ""}
+        onClick={() => toggleSidebar()}
+        type="button"
+      >
+        <img src="/images/back.svg" />
       </div>
     </div>
   );

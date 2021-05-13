@@ -1,7 +1,6 @@
 import React from 'react';
-import './floatinglabel.css';
 
-export default ({ type, name, placeholder, value, onChangeText, isActive }) => {
+const FloatingLabel = ({ type, name, placeholder, value, onChangeText, isActive }) => {
 	return (
 		<div id='float-label'>
 			<input
@@ -10,7 +9,7 @@ export default ({ type, name, placeholder, value, onChangeText, isActive }) => {
 				value={value}
 				onChange={onChangeText}
 				className='bg-light btn-outline-secondary mb-1'
-				autocomplete='off'
+				autoComplete='off'
 			/>
 
 			<label className={isActive ? 'Active' : ''} htmlFor={type}>
@@ -19,3 +18,5 @@ export default ({ type, name, placeholder, value, onChangeText, isActive }) => {
 		</div>
 	);
 };
+
+export default FloatingLabel;

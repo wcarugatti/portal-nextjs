@@ -19,7 +19,7 @@ table {
 
 table tbody {
   display: block;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 190px);
   overflow-y: auto;
 }
 
@@ -28,6 +28,10 @@ table tbody {
   z-index: 2;
   position: sticky;
 } */
+
+table th{
+  padding-right: 25px !important;
+}
 
 table th, table td {
   text-align: center;
