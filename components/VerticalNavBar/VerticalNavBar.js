@@ -1,15 +1,57 @@
 import React from "react";
+import { useRouter } from "next/router";
+import { Dropdown, DropdownButton } from "react-bootstrap";
+export default function VerticalNavBar({
+  sidebar,
+  toggleSidebar,
+  filter,
+  summary,
+}) {
+  const router = useRouter();
+  const filterString = "Filtro: " + (filter == "home" ? "Nenhum" : filter);
 
-// import { Container } from './styles';
-import FloatingLabel from "../FloatingLabel/floatinglabel";
-export default function VerticalNavBar({ sidebar, toggleSidebar }) {
+  const filterRedirect = function (item) {
+    if (typeof window !== "undefined") {
+      router.push({
+        pathname: "/[filter]/[page]",
+        query: { filter: item, page: 1 },
+      });
+      toggleSidebar();
+    }
+  };
+
   return (
     <div className={"vertical-nav " + (sidebar ? "active" : "")} id="sidebar">
-      <div className="py-4 px-3 mb-4 profile">
+      <div className="py-4 px-3 mb-4 d-flex flex-column">
+        <DropdownButton
+          id="dropdown-basic-button"
+          title={filterString}
+          className="text-center w-100"
+        >
+          <Dropdown.Item onClick={() => filterRedirect("home")}>
+            Nenhum
+          </Dropdown.Item>
+          {Object.keys(summary).map((item) => (
+            <Dropdown.Item key={item} onClick={() => filterRedirect(item)}>
+              {item}
+            </Dropdown.Item>
+          ))}
+        </DropdownButton>
+      </div>
+
+      <div
+        id="sidebarCollapse"
+        className={sidebar ? "rotate" : ""}
+        onClick={() => toggleSidebar()}
+        type="button"
+      >
+        <img src="/images/back.svg" />
+      </div>
+
+      {/* <div className="py-4 px-3 mb-4 profile">
         <div className="media-body text-center">
-          <img src="images/man.svg" height="90" width="auto" />
-          {/* <h4 className="mb-0 media-content">Rahul Yaduvanshi</h4>
-          <p className=" mb-0 media-sub-content">UI/UX Developer</p> */}
+          <h4 className="mb-0 media-content">Rahul Yaduvanshi</h4>
+          <p className=" mb-0 media-sub-content">UI/UX Developer</p>
         </div>
       </div>
 
@@ -45,15 +87,7 @@ export default function VerticalNavBar({ sidebar, toggleSidebar }) {
             Instagram
           </a>
         </li>
-      </ul>
-      <div
-        id="sidebarCollapse"
-        className={sidebar ? "rotate" : ""}
-        onClick={() => toggleSidebar()}
-        type="button"
-      >
-        <img src="/images/back.svg" />
-      </div>
+      </ul> */}
     </div>
   );
 }

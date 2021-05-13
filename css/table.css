@@ -23,6 +23,10 @@ table tbody {
   overflow-y: auto;
 }
 
+ul.pagination{
+  margin-bottom: 0;
+}
+
 /* table th {
   top: 0;
   z-index: 2;

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { connectToDatabase } from "../../util/mongodb";
 import Page from "../../components/Page";
 
@@ -109,6 +108,7 @@ export async function getStaticProps(context) {
       page: context.params.page,
       totalpages,
       filter: context.params.filter,
+      summary
     },
 
     revalidate: 30,

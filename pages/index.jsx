@@ -48,7 +48,6 @@ export async function getStaticProps(context) {
   for (const lang in summary) {
     totalpages += summary[lang];
   }
-
   
   totalpages = Math.ceil(totalpages / perPage);
 
@@ -57,11 +56,9 @@ export async function getStaticProps(context) {
       data: JSON.parse(JSON.stringify(data)),
       page: 1,
       totalpages,
-      filter: "home"
+      filter: "home",
+      summary
     },
-    // Next.js will attempt to re-generate the page:
-    // - When a request comes in
-    // - At most once every second
     revalidate: 60 * 5, // In seconds
   };
 }

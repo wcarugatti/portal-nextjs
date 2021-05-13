@@ -3,10 +3,9 @@ import JobsPagination from "./JobsPagination";
 import { FilteringTable } from "./Table/table";
 import VerticalNavBar from "./VerticalNavBar/VerticalNavBar";
 
-function Page({ data, page, totalpages, filter }) {
+function Page({ data, page, totalpages, filter, summary }) {
   const [loading, setLoading] = useState(false);
   const [sidebar, setSidebar] = useState(true);
-
   function toggleSidebar() {
     setSidebar(!sidebar);
   }
@@ -14,7 +13,7 @@ function Page({ data, page, totalpages, filter }) {
   // console.log(props.data)
   return (
     <>
-      <VerticalNavBar sidebar={sidebar} toggleSidebar={toggleSidebar} />
+      <VerticalNavBar sidebar={sidebar} toggleSidebar={toggleSidebar} summary={summary} filter={filter}/>
       <div
         // className={"page-content p-5" + (sidebar ? "active" : "")}
         className="page-content px-5 py-4"
