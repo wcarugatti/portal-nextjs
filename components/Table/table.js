@@ -25,10 +25,10 @@ export const FilteringTable = ({ data, filter }) => {
 						<Table className='table-fixed'>
 							<thead>
 								<tr>
-									<th>
+									{/* <th>
 										Site
 										<br />
-									</th>
+									</th> */}
 									<th>
 										Vaga
 										<br />
@@ -54,7 +54,7 @@ export const FilteringTable = ({ data, filter }) => {
 							<tbody>
 								{data.map((row, i) => (
 									<tr key={i}>
-										<td className='label-info'>{row.site}</td>
+										{/* <td className='label-info'>{row.site}</td> */}
 
 										<td className='label-info'>{row.job}</td>
 
