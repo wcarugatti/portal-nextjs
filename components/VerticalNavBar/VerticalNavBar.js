@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import logo from '../../util/job-y-jobs.jpeg';
-import { Dropdown, DropdownButton, Image } from 'react-bootstrap';
+import { Dropdown, DropdownButton } from 'react-bootstrap';
 export default function VerticalNavBar({
 	sidebar,
 	toggleSidebar,
@@ -24,7 +24,7 @@ export default function VerticalNavBar({
 	return (
 		<div className={'vertical-nav ' + (sidebar ? 'active' : '')} id='sidebar'>
 			<div className='py-4 px-3 mb-4 d-flex flex-column'>
-				<Image src={logo} />
+				<img src={logo} />
 				<DropdownButton
 					id='dropdown-basic-button'
 					title={filterString}
