@@ -24,7 +24,6 @@ export default function VerticalNavBar({
 	return (
 		<div className={'vertical-nav ' + (sidebar ? 'active' : '')} id='sidebar'>
 			<div className='py-4 px-3 mb-4 d-flex flex-column'>
-				<img src={logo} />
 				<DropdownButton
 					id='dropdown-basic-button'
 					title={filterString}
