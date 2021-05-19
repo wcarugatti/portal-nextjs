@@ -72,7 +72,7 @@ export const FilteringTable = ({ data, filter }) => {
 												{/* <a href={row.link} data-tip={row.description} data-html={true} data-for={"tip-"+i} target="_blank"> */}
 												<button className='td-button'>VISUALIZAR VAGA</button>
 											</a>
-											{row.site}
+
 											{/* <ReactTooltip id={"tip-"+i} effect='solid' place="bottom" type="light"/> */}
 										</td>
 									</tr>
