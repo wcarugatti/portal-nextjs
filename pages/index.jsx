@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header/header";
-import { FilteringTable } from "../components/Table/table";
 import { useHistory } from "react-router-dom";
-import MOCK_DATA from "../components/Table/jobs.json";
 import { connectToDatabase } from "../util/mongodb";
 import ClipLoader from "react-spinners/ClipLoader";
 import VerticalNavBar from "../components/VerticalNavBar/VerticalNavBar";

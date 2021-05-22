@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import JobsPagination from "./JobsPagination";
-import { FilteringTable } from "./Table/table";
+import { FilteringTable } from "./FilteringTable/FilteringTable";
 import VerticalNavBar from "./VerticalNavBar/VerticalNavBar";
 
 function Page({ data, page, totalpages, filter, summary }) {
@@ -16,7 +16,7 @@ function Page({ data, page, totalpages, filter, summary }) {
       <VerticalNavBar sidebar={sidebar} toggleSidebar={toggleSidebar} summary={summary} filter={filter}/>
       <div
         // className={"page-content p-5" + (sidebar ? "active" : "")}
-        className="page-content px-5 py-4"
+        className="page-content px-5 pb-4 pt-2"
         id="content"
       >
         <div className="row">

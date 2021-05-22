@@ -36,5 +36,8 @@
     "react-table": "^7.6.3",
     "react-tooltip": "^4.2.18",
     "styled-components": "^5.2.3"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^5.5.0"
   }
 }

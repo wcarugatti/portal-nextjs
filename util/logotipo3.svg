@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 26 7"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="logotipo3.svg"
+   inkscape:export-filename="C:\Users\carugatti\Desktop\jobyjobs-logo3.png"
+   inkscape:export-xdpi="390.53122"
+   inkscape:export-ydpi="390.53122">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="44.8"
+     inkscape:cx="13.149747"
+     inkscape:cy="5.6100706"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g934"
+       transform="translate(-0.08928578)">
+      <path
+         d="M 7.5109049,-0.26518849 H 15.637887 V 7.861794 H 7.5109049 Z"
+         fill="none"
+         id="path10"
+         style="stroke-width:0.338624" />
+      <path
+         d="M 10.693973,5.3559744 9.1363014,3.7983028 10.693973,2.2406311 10.219899,1.7665571 8.1881534,3.7983028 10.219899,5.8300484 Z m 1.760846,0 1.557672,-1.5576716 -1.557672,-1.5576717 0.474074,-0.474074 2.031746,2.0317457 -2.031746,2.0317456 z"
+         id="path12"
+         style="fill:#a6a7a5;fill-opacity:1;stroke-width:0.338624" />
+      <g
+         id="g107"
+         transform="matrix(0.00576825,0,0,0.00576825,8.694896,0.4244607)"
+         style="fill:#345a7a;fill-opacity:1">
+        <path
+           style="fill:#345a7a;fill-opacity:1;stroke:#000000;stroke-width:0.415945;stroke-opacity:0"
+           d="m 482.00995,373.24094 c -5.79489,-0.45893 -11.26013,-1.38492 -14.13276,-2.39457 -3.41409,-1.19996 -6.42244,-3.41774 -10.6864,-7.87809 -4.18836,-4.38128 -13.90783,-16.55104 -18.32141,-22.94028 -10.10996,-14.63549 -22.78674,-40.04028 -22.78674,-45.66558 0,-2.30329 5.49851,-8.85834 16.69836,-19.90698 11.52892,-11.37326 16.6703,-15.45907 21.06916,-16.74349 17.25004,-5.03685 47.51937,-6.53813 71.41809,-3.54216 7.01188,0.87902 16.78192,2.8958 21.20168,4.37656 6.80097,2.27853 8.97773,4.02284 26.8327,21.50198 l 12.2631,12.00497 -0.56106,2.25421 c -2.90332,11.66486 -10.3733,26.56111 -22.19729,44.26468 -10.18779,15.25376 -20.9698,27.94724 -26.11949,30.75006 -3.38327,1.8414 -10.93042,3.16914 -22.65016,3.98475 -6.93194,0.48241 -25.58801,0.44393 -32.02778,-0.0661 z"
+           id="path848" />
+        <path
+           style="fill:#345a7a;fill-opacity:1;stroke:#000000;stroke-width:0.415945;stroke-opacity:0"
+           d="m 325.82254,194.65516 -78.40498,-78.40581 40.55465,-40.554656 40.55465,-40.554654 78.40499,78.40581 78.40499,78.40582 -40.55466,40.55465 -40.55465,40.55465 z"
+           id="path850" />
+        <path
+           style="fill:#345a7a;fill-opacity:1;stroke:#000000;stroke-width:0.415945;stroke-opacity:0"
+           d="m 555.42414,232.50603 -40.55358,-40.55517 78.30114,-78.30115 78.30115,-78.301145 40.55479,40.554791 40.55479,40.554794 -78.30236,78.30153 -78.30236,78.30153 z"
+           id="path852" />
+        <path
+           style="fill:#345a7a;fill-opacity:1;stroke:#000000;stroke-width:0.415945;stroke-opacity:0"
+           d="m 485.75346,221.13055 c 6.63432,-6.58885 12.57763,-12.31509 13.20734,-12.72497 1.12941,-0.73514 1.16605,-0.72939 2.70364,0.42367 0.85729,0.64289 6.79963,6.36983 13.20518,12.72652 l 11.64647,11.55762 -26.41252,-0.002 -26.41252,-0.002 12.06241,-11.97973 z"
+           id="path854" />
+        <g
+           transform="matrix(0.07901701,0,0,-0.07901701,106.91495,545.27064)"
+           id="g8"
+           style="fill:#345a7a;fill-opacity:1">
+          <path
+             d="m 3917.9,198.5 -384.8,-2310.7 652.4,-1310.6 c 625.1,-1250.1 658.3,-1312.6 726.6,-1343.9 84,-41 164.1,-27.3 228.5,37.1 25.4,25.4 334,623.1 685.6,1332.1 L 6466.9,-2112.2 6084.1,181 c -209,1259.9 -386.7,2299 -392.6,2308.8 -5.9,9.8 -320.4,17.6 -699.3,17.6 h -689.5 z"
+             id="path6"
+             style="fill:#345a7a;fill-opacity:1" />
+        </g>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#345a7a;fill-opacity:1;stroke-width:0.264583"
+         x="0.42574191"
+         y="5.0461574"
+         id="text854"><tspan
+           sodipodi:role="line"
+           id="tspan852"
+           x="0.42574191"
+           y="5.0461574"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Roboto Round';-inkscape-font-specification:'Roboto Round';fill:#345a7a;fill-opacity:1;stroke-width:0.264583">JOB</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#345a7a;fill-opacity:1;stroke-width:0.264583"
+         x="15.417552"
+         y="5.0461574"
+         id="text854-8"><tspan
+           sodipodi:role="line"
+           id="tspan852-2"
+           x="15.417552"
+           y="5.0461574"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Roboto Round';-inkscape-font-specification:'Roboto Round';fill:#345a7a;fill-opacity:1;stroke-width:0.264583">JOBS</tspan></text>
+    </g>
+  </g>
+</svg>

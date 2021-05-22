@@ -33,7 +33,7 @@ export default function VerticalNavBar({
 					</Dropdown.Item>
 					{Object.keys(summary).map((item) => (
 						<Dropdown.Item key={item} onClick={() => filterRedirect(item)}>
-							{item}
+							{item} - {summary[item]}
 						</Dropdown.Item>
 					))}
 				</DropdownButton>

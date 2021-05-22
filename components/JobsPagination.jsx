@@ -16,9 +16,9 @@ function JobsPagination({ page, totalpages, filter }) {
       {page >= 4 && (
         <>
           <Link passHref={true} href={`${semiPath}1`}>
-            <Pagination.Item>1</Pagination.Item>
+            <Pagination.Item key="1">1</Pagination.Item>
           </Link>
-          <Pagination.Item>-</Pagination.Item>
+          <Pagination.Item key="-">-</Pagination.Item>
         </>
       )}
       {pageNumbers.map((n) => (
@@ -30,9 +30,9 @@ function JobsPagination({ page, totalpages, filter }) {
       ))}
       {page <= totalpages - 3 && totalpages > 5 && (
         <>
-          <Pagination.Item>-</Pagination.Item>
+          <Pagination.Item key="--">-</Pagination.Item>
           <Link passHref={true} href={semiPath + totalpages}>
-            <Pagination.Item>{totalpages}</Pagination.Item>
+            <Pagination.Item key={totalpages}>{totalpages}</Pagination.Item>
           </Link>
         </>
       )}
