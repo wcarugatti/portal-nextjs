@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import logo from '../../util/job-y-jobs.jpeg';
+// import logo from '../../util/job-y-jobs.jpeg';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 export default function VerticalNavBar({
 	sidebar,

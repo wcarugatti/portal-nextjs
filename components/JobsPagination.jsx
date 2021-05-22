@@ -12,7 +12,7 @@ function JobsPagination({ page, totalpages, filter }) {
   }
   const semiPath = `/${filter}/`;
   return (
-    <Pagination>
+    <Pagination className="justify-content-end">
       {page >= 4 && (
         <>
           <Link passHref={true} href={`${semiPath}1`}>
