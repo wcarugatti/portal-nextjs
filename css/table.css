@@ -341,3 +341,24 @@ body {
 		width: calc(100% - 17rem);
 	}
 }
+
+.bg-orange button{
+	/* padding-right: 30px;
+	padding-left: 30px; */
+	background-color: #fd8f66;
+	border: #fd8f66;
+}
+.bg-orange button:active, .bg-orange button:focus, .bg-orange.show button{
+	background-color: white !important;
+	color: #fd8f66 !important;
+	box-shadow: 0 0 0 white !important;
+}
+
+.bg-orange button:hover{
+	background-color: white;
+	color: #fd8f66;
+}
+
+.bg-orange a{
+	/* color: #fd8f66; */
+}

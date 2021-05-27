@@ -1,17 +1,30 @@
 import React, { useEffect, useState } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 import { Table } from "react-bootstrap";
-import Logo from "../../util/logotipo3.svg"
+import Logo from "../../util/logotipo3.svg";
 // import ReactTooltip from 'react-tooltip';
 
-export const FilteringTable = ({ data, filter }) => {
+export const FilteringTable = ({ data, filter, summary }) => {
   // console.log("data",data)
   const [loading, setLoading] = useState(false);
 
-  const filterShow =
-    filter == "home"
-      ? ""
-      : " - " + filter.charAt(0).toUpperCase() + filter.slice(1);
+  const filterShow = () => {
+    var total = 0;
+    if (filter == "home") {
+      for (const lang in summary) {
+        total += summary[lang];
+      }
+    } else{
+      total = summary[filter]
+    }
+
+    var filterString =
+      filter == "home"
+        ? " (" + total+ ")"
+        : " - " + filter.charAt(0).toUpperCase() + filter.slice(1) + " (" + total+ ")";
+
+    return filterString;
+  };
 
   return (
     <>
@@ -23,9 +36,9 @@ export const FilteringTable = ({ data, filter }) => {
         <>
           <div className="d-flex justify-content-between align-items-center mx-4">
             <label className="label-search mb-0">
-              VAGAS DISPONÍVEIS{filterShow}
+              VAGAS DISPONÍVEIS{filterShow()}
             </label>
-						<Logo height="50px"/>
+            <Logo height="50px" />
           </div>
           <div className="div-table">
             <Table className="table-fixed">

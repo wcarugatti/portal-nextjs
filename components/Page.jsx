@@ -21,7 +21,7 @@ function Page({ data, page, totalpages, filter, summary }) {
       >
         <div className="row">
           <div className="col-12">
-            <FilteringTable data={data} filter={filter} />
+            <FilteringTable data={data} filter={filter} summary={summary} />
             <JobsPagination page={page} totalpages={totalpages} filter={filter}/>
           </div>
         </div>
