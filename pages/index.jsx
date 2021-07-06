@@ -57,6 +57,6 @@ export async function getStaticProps(context) {
       filter: "home",
       summary
     },
-    revalidate: 60 * 5, // In seconds
+    revalidate: 10, // In seconds
   };
 }
