@@ -25,7 +25,7 @@ export default function VerticalNavBar({
 	return (
 		<div className={'vertical-nav ' + (sidebar ? 'active' : '')} id='sidebar'>
 			<div className='py-4 px-3 mb-4 d-flex flex-column'>
-				<Logo className="mb-3" style={{marginRight: "-20px"}} height="50px"/>
+				<Logo className="mb-3" style={{marginRight: ""}} height="50px"/>
 				<DropdownButton
 					id='dropdown-basic-button'
 					title={filterString}

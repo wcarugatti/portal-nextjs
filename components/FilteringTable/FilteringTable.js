@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 import { Table } from "react-bootstrap";
 import Logo from "../../util/logotipo3.svg";
+import Bubble from "../../util/bubble-icon.svg";
 // import ReactTooltip from 'react-tooltip';
 
 export const FilteringTable = ({ data, filter, summary }) => {
@@ -14,14 +15,19 @@ export const FilteringTable = ({ data, filter, summary }) => {
       for (const lang in summary) {
         total += summary[lang];
       }
-    } else{
-      total = summary[filter]
+    } else {
+      total = summary[filter];
     }
 
     var filterString =
       filter == "home"
-        ? " (" + total+ ")"
-        : " - " + filter.charAt(0).toUpperCase() + filter.slice(1) + " (" + total+ ")";
+        ? " (" + total + ")"
+        : " - " +
+          filter.charAt(0).toUpperCase() +
+          filter.slice(1) +
+          " (" +
+          total +
+          ")";
 
     return filterString;
   };
@@ -65,7 +71,6 @@ export const FilteringTable = ({ data, filter, summary }) => {
                     <br />
                   </th>
                   <th>
-                    Link
                     <br />
                   </th>
                 </tr>
@@ -92,7 +97,12 @@ export const FilteringTable = ({ data, filter, summary }) => {
                         {/* <a href={row.link} data-tip={row.description} data-html={true} data-for={"tip-"+i} target="_blank"> */}
                         <button className="td-button">VISUALIZAR VAGA</button>
                       </a>
-
+                      <a target="_blank" className="btn-avaliar" href="https://greenfeedback.com.br/avalie-seu-processo">
+                        <button >
+                          <Bubble />
+                          <div>Avaliar</div>
+                        </button>
+                      </a>
                       {/* <ReactTooltip id={"tip-"+i} effect='solid' place="bottom" type="light"/> */}
                     </td>
                   </tr>
